@@ -17,7 +17,7 @@ const data =[
 ]
 
 const Slider = () => {
-const [tecs, setTecs] = useState(data)
+const [tecs] = useState(data)
 const [index, setIndex] = useState(0)
 
   useEffect(() => {
