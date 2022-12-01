@@ -60,7 +60,7 @@ const Project = ({lenguage,lenAnimat}) => {
               transition={{duration:0.25,ease:'easeInOut',staggerChildren:0.5}}
               className='pro__item-hover'
               >
-                <a href="#">
+                <a href="/#">
                   <motion.div
                   whileInView={{scale:[0,1]}}
                   whileHover={{scale:[1,0.9]}}
@@ -71,7 +71,7 @@ const Project = ({lenguage,lenAnimat}) => {
                   </IconContext.Provider>
                   </motion.div>
                 </a>
-                <a href="#">
+                <a href="/#">
                   <motion.div
                   whileInView={{scale:[0,1]}}
                   whileHover={{scale:[1,0.9]}}
