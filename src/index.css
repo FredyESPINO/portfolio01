@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+:root {
+  --font-base: 'Roboto Condensed',
+    sans-serif;
+
+  /* Terracota pallete */
+  --blue-terra:#003049;
+  --red-terra:#D62828;
+  --yellow-terra:#F77F00;
+  --paleY-terra:#FCBF49;
+  --white-terra:#EAE2B7;
+
+  /* dark mode */
+
+  --blue-05:#0D1B2A;
+  --blue-04:#1B263B;
+  --blue-03:#415A77;
+  --blue-02:#778DA9;
+  --blue-01:#E0E1DD;
+
+}
+
+
+
+.dark_mode {
+  background-color: var(--blue-05);
+  color: var(--blue-01);
+}
+
+.terra{
+  background-color: var(--red-terra);
+  color: var(--blue-terra);
+}

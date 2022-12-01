@@ -1,0 +1,149 @@
+@use "sass:map";
+$breackpoints: (
+    "xs":0,
+    "sm":480px,
+    "md":720px,
+    "lg":1200px
+);
+
+@mixin xs {
+    @media(min-width: map.get($breackpoints, "xs")) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media(min-width: map.get($breackpoints, "sm")) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media(min-width: map.get($breackpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media(min-width: map.get($breackpoints, "lg")) {
+        @content;
+    }
+}
+
+
+.nav {
+    // width: 100px;
+    // height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    top: 50vh;
+    transition: all 5s ease-in;
+    transform: translateY(-50%);
+    
+    @include xs{
+        display: none;
+    }
+    @include sm{
+        display: block;
+    }
+}
+
+.nav__show{
+    display: block;
+}
+
+.nav__switch-container{
+    position: fixed;
+    top: 0;
+    right: 10px;
+    @include sm {
+        display: block;
+    }
+}
+
+.nav__menu-show{
+
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 50%;
+        box-shadow: 1px 2px 2px rgba(0, 0, 255, 0.5);
+    @include xs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        @include sm {
+            display: none;
+        }
+}
+
+
+.nav__switch {
+    display: none;
+
+    @media screen and (max-width:900px) {
+        display: flex;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 2px rgba(0, 0, 255, 0.5);
+    }
+}
+.nav__switch-idiom {
+        display: flex;
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 2px rgba(0, 0, 255, 0.5);
+    @media screen and (max-width:900px) {
+        
+    }
+}
+
+
+.nav__dot {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 15px 0px;
+    border-radius: 50%;
+    box-shadow: 1px 2px 2px rgba(0, 0, 255, 0.5);
+    background-color: #778DA9;
+    cursor: pointer;
+    
+}
+
+a:visited,
+a {
+    color: inherit;
+}
+
+
+.nav__svg {
+    width: 20px;
+    height: 20px;
+    color: white;
+}

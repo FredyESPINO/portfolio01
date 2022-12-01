@@ -1,0 +1,4 @@
+
+    320px — 480px: Mobile devices
+    481px — 1024px : iPads, Tablets,Small screens, laptops
+    1025px and more: Desktops, large screens,Extra large screens, TV

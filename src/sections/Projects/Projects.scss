@@ -1,0 +1,154 @@
+@use "sass:map";
+$breackpoints: (
+    "xs":0,
+    "sm":480px,
+    "md":720px,
+    "lg":1200px
+);
+
+@mixin xs {
+    @media(min-width: map.get($breackpoints, "xs")) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media(min-width: map.get($breackpoints, "sm")) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media(min-width: map.get($breackpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media(min-width: map.get($breackpoints, "lg")) {
+        @content;
+    }
+}
+
+
+.project__container {
+    height: 90vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: azure;
+}
+
+.pro__portfolio{
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+    .pro__item-container {
+        width: 270px;
+        flex-direction: column;
+        border-radius: 15px;
+        opacity: 0.5;
+        margin: 2rem;
+        padding: 1rem;
+        background-color: #fff;
+        // background-color: #001122;
+        
+        color: #001122;
+
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 0 50px rgba($color: #FFFAFA, $alpha: 0.7);
+            opacity: 1;
+        }
+
+        @include sm{
+            width: 250px;
+        }
+
+   }
+
+   
+
+.pro__item-img {
+    width: 100%;
+    height: 230px;
+
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+    }
+
+    
+}
+
+.pro__item-hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        margin: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        .pro__svg{
+            width: 80%;
+            height: 80%;
+        }
+    }
+}
+
+.pro__item-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+
+    h4 {
+        margin-top: 1rem;
+        line-height: 1.5;
+
+        @media screen and (min-width: 2000px) {
+            margin-top: 3rem;
+        }
+    }
+
+   
+}
