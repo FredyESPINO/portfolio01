@@ -17,6 +17,7 @@ import './Projects.scss'
 const Project = ({lenguage,lenAnimat}) => {
   const {projects:{title}}=lenguage
   const [animateCard, setAnimateCard] = useState({opacity:1})
+  
 
   useEffect(() => {
     setAnimateCard({opacity:0})
@@ -48,19 +49,19 @@ const Project = ({lenguage,lenAnimat}) => {
               className='pro__portfolio'
               >
         {
-          [1,2,3,4].map((item,index)=>{
+          lenguage.projects.projects.map((item,index)=>{
             return(
               <motion.div key={item+index}>
           <div className="pro__item-container">
             <div className="pro__item-img">
-              <img src={prueba} alt="" />
+              <img src={item.img} alt="" />
 
               <motion.div
               whileHover={{opacity:[0,1]}}
               transition={{duration:0.25,ease:'easeInOut',staggerChildren:0.5}}
               className='pro__item-hover'
               >
-                <a href="/#">
+                <a  target="_blank" href={item.link}>
                   <motion.div
                   whileInView={{scale:[0,1]}}
                   whileHover={{scale:[1,0.9]}}
@@ -71,7 +72,7 @@ const Project = ({lenguage,lenAnimat}) => {
                   </IconContext.Provider>
                   </motion.div>
                 </a>
-                <a href="/#">
+                <a  target="_blank" href={item.githubLink}>
                   <motion.div
                   whileInView={{scale:[0,1]}}
                   whileHover={{scale:[1,0.9]}}
@@ -86,8 +87,16 @@ const Project = ({lenguage,lenAnimat}) => {
               </motion.div>
             </div>
             <div className="pro__item-texts">
-              <h4 className="bold-text">titulo prueba</h4>
-              <p className="p-text">descripcion prueba</p>
+              <motion.h4 className="bold-text"
+              animate={animateCard}
+              transition={{duration:0.5}}
+              >{item.titulo}</motion.h4>
+              <motion.p 
+                animate={animateCard}
+                transition={{duration:0.5}}
+                className="p-text">
+                {item.desc}
+                </motion.p>
 
             </div>
 

@@ -1,3 +1,7 @@
+import res from "../assets/restaurante.PNG"
+import eco from "../assets/ecomerce.PNG"
+import pin from "../assets/pins.PNG"
+
 const len=[{
     idiom:'ESP',
     about:{
@@ -14,6 +18,26 @@ const len=[{
     },
     projects:{
         title:"mis proyectos personales.",
+        projects:[
+            {titulo:"Landing Page Restaurent.",
+            desc:"Practica de un landing page.",
+            link:"https://animated-jalebi-8baf30.netlify.app/",
+            githubLink:"https://github.com/FredyESPINO/restaurant_front",
+            img:res
+            },
+            {titulo:"Ecomerce.",
+            desc:"Practica de un ecomerce.",
+            link:"https://ecomerce-portfolio-qdld-msy9dhpxs-fredyespino.vercel.app/",
+            githubLink:"https://github.com/FredyESPINO/ecomerce_portfolio",
+            img:eco
+            },
+            {titulo:"Clon de Pinterest.",
+            desc:"Practica de un clon de Pinterest .",
+            link:"https://brilliant-cendol-9bf65f.netlify.app/",
+            githubLink:"https://github.com/FredyESPINO/socialapp-for-portfolio",
+            img:pin
+            },
+        ]
         
     },
     contact:{
@@ -32,7 +56,27 @@ const len=[{
 {
     idiom:'ENG',
     projects:{
-        title:"my personal projects."
+        title:"my personal projects.",
+                projects:[
+            {titulo:"Landing Page Restaurant.",
+            desc:"Practice of a landing page.",
+            link:"https://animated-jalebi-8baf30.netlify.app/",
+            githubLink:"https://github.com/FredyESPINO/restaurant_front",
+            img:res
+            },
+            {titulo:"Ecomerce.",
+            desc:"Practice for an ecomerce.",
+            link:"https://ecomerce-portfolio-qdld-msy9dhpxs-fredyespino.vercel.app/",
+            githubLink:"https://github.com/FredyESPINO/ecomerce_portfolio",
+            img:eco
+            },
+            {titulo:"Pinterest clone.",
+            desc:"A kinda Pinterest clone.",
+            link:"https://brilliant-cendol-9bf65f.netlify.app/",
+            githubLink:"https://github.com/FredyESPINO/socialapp-for-portfolio",
+            img:pin
+            },
+        ]
     },
     about:{
         title:"About me",

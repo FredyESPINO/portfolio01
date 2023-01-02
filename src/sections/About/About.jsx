@@ -11,6 +11,12 @@ const{about:{tecs,title,idiom:{idiom_title,idiom_button},info:{info_title}}}=len
 const [showModal, setShowModal] = useState(false)
 const [animateCard, setAnimateCard] = useState({opacity:1})
 
+  const showModalHandler=()=>{
+    setShowModal(true)
+    document.body.classList.add("overflow-hidden");
+
+  }
+
 
     useEffect(() => {
     setAnimateCard({opacity:0})
@@ -36,7 +42,7 @@ const [animateCard, setAnimateCard] = useState({opacity:1})
       <div className='about__items-cont'  >
 
         <div className="about__item"
-        onClick={()=>setShowModal(true)}
+        onClick={showModalHandler}
         >
           <motion.h3 animate={animateCard}>{info_title}</motion.h3>
           <div className="about__svg" />
