@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import {AiFillEye,AiFillGithub} from 'react-icons/ai'
 import {motion} from 'framer-motion'
-import prueba from '../../assets/imgPrueba.png'
 import {IconContext} from 'react-icons'
 
 
@@ -61,7 +60,7 @@ const Project = ({lenguage,lenAnimat}) => {
               transition={{duration:0.25,ease:'easeInOut',staggerChildren:0.5}}
               className='pro__item-hover'
               >
-                <a  target="_blank" href={item.link}>
+                <a  target="_blank" href={item.link} rel="noreferrer">
                   <motion.div
                   whileInView={{scale:[0,1]}}
                   whileHover={{scale:[1,0.9]}}
@@ -72,7 +71,7 @@ const Project = ({lenguage,lenAnimat}) => {
                   </IconContext.Provider>
                   </motion.div>
                 </a>
-                <a  target="_blank" href={item.githubLink}>
+                <a  target="_blank" href={item.githubLink} rel="noreferrer">
                   <motion.div
                   whileInView={{scale:[0,1]}}
                   whileHover={{scale:[1,0.9]}}
